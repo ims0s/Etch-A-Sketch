@@ -1,3 +1,6 @@
+html{
+    background-color: darkorchid;
+}
 .main , #menu{
     display: flex;
     
@@ -5,6 +8,8 @@
 .main{
     flex-direction: column;
     align-items: center;
+    background-color: darkorchid;
+    
 }
 #menu{
     gap: 20px;
@@ -12,7 +17,8 @@
 #prop{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 2em;
 }
 
 #grid{
@@ -20,9 +26,9 @@
     grid-template: repeat(16,1fr) / repeat(16,1fr) ;
     height: 550px;
     width: 550px;
-    border: 1px solid black;
+    
 }
 .pixel{
-    /* border: 1px solid black; */
     box-sizing: border-box;
+    background-color: white;
 }

@@ -8,7 +8,7 @@ let color = 'black'
 let mouseDown = false;
 document.body.addEventListener('mousedown',() => mouseDown=true);
 document.body.addEventListener('mouseup',() => mouseDown=false);
-input.innerText=`${size.value}X${size.value}`
+input.innerText=`${size.value} X ${size.value}`
 
 function createGrid(side=16){
     grid.innerHTML=''; //here I'm emptying the grid
