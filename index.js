@@ -1,11 +1,14 @@
 const grid=document.getElementById("grid");
 const colorPicker= document.getElementById('color')
 const reset=document.getElementById('reset')
+const input = document.getElementById('inputValue')
+const size = document.getElementById('gridSize')
 let pixels;
 let color = 'black'
 let mouseDown = false;
 document.body.addEventListener('mousedown',() => mouseDown=true);
 document.body.addEventListener('mouseup',() => mouseDown=false);
+input.innerText=`${size.value}X${size.value}`
 
 function createGrid(side=16){
     grid.innerHTML=''; //here I'm emptying the grid
@@ -32,6 +35,10 @@ const changeColor=(e) =>{
 
 colorPicker.addEventListener('change',(e) => color = colorPicker.value)//when change the color
 
-reset.addEventListener('click',() => createGrid())
+reset.addEventListener('click',() => createGrid(size.value))
+size.addEventListener('change',(e) => {
+    input.innerText=`${size.value}X${size.value}`
+    createGrid(size.value)
+})
 
 createGrid();
